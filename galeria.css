@@ -1,0 +1,159 @@
+.main-section {
+  overflow: hidden;
+  padding: 20px;
+  display: grid;
+  height: 90vh;
+  padding: 15px 15px 15px 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1%;
+  overflow: hidden; 
+  padding: 20px; 
+}
+.main-container .filter {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+.filter {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter input[type="text"],
+.filter select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  animation: scroll-left 55s linear infinite; 
+  padding-left: 50%; 
+}
+.carousel-container img {
+  width: 15vw;
+  height: 18vh;
+}
+.card {
+  margin-right: 250px; 
+  flex-shrink: 0; 
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out; 
+  opacity: 0.6;
+  transform: scale(1.8); 
+  cursor: pointer;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.main-section::before,
+.main-section::after {
+  content: "";
+  position: absolute;
+  top: 109px;
+  bottom: 104px;
+  width: 121px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.main-section::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  ); 
+}
+
+.main-section::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  ); 
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  #modal-enviado {
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(30 64 92);
+    color: white;
+    padding: 20px;
+    border-radius: 40px;
+    z-index: 1000; 
+    height: 100vh;
+  }
+  .card.filtered-out {
+    display: none;
+}

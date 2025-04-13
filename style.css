@@ -1,19 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Wallpoet&display=swap");
 
-.labo-css{
- background-color: #4CAF50;
- text-decoration: none;
- border: none;
- color: white;
- border-radius: 4px;
- text-decoration:underline;
- padding: 15px 32px 15px 32px;
- font-size: 16px;
- margin:  4px 2px;
- cursor: pointer;
- text-align: center;
+* {
+  padding: 0;
+}
+
+:root {
+  --primary-color: #153c66;
+  --secondary-color: #b1bfca;
+  --accent-color: #ffc107;
+  --custom-blue: #3498db;
+  --custom-green: #2ecc71;
+  --custom-gray: #f3f3f3;
+  --text-primary: #212529;
+  --text-secondary: #636c72;
+  --background-light: #ffffff;
+  --background-dark: #343a40;
+  --border-color: #299e77be; /* o el color que quieras para la animación del borde */
+}
+.main-container nav {
+
+  background-image: linear-gradient(to right, #153c66, #1d3c50, #15696d); /* Puedes añadir más colores */
+  border-radius: 2px 1px 10px 10px;
+  height: 14vh;
+  position: relative;
+  overflow: hidden;
+}
+.main-container nav  ul{
+  flex-direction: row;
+  gap: 30px;
+  font-size: 24px;
+}
+.main-container nav  .logo{
+ background: url(/src/harvin.svg) no-repeat center / 36px;
+ height: 100%;
 
 }
-.labo-css:hover{
-    transition: 0.9s;
-   background-color:  #3e8e41;
+.main-container a {
+  color: white;
+}
+.main-container a:hover {
+  color: rgb(228, 35, 35);
+}
+.main-container a:focus {
+  color: rgb(32, 219, 233);
+}
+.main-container {
+  background-color: #e0ebe0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 120vh;
+  
+}
+
+.main-section {
+  display: grid;
+  height: 90vh;
+  padding: 15px 15px 15px 15px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.main-section main{
+  display: flex;
+ align-items: center;
+  gap: 18px; 
+}
+/*imagen principal */
+.img-recortada-elipse {
+  clip-path: ellipse(
+    50% 50% at 50% 50%
+  ); /* Elipse con radio horizontal 50%, vertical 30%, centrada */
+  height: auto;
+  width: 267px;
+  border-radius: 15px;
+}
+section{
+  width: 60%;
+  height: 90%;
+}
+
+section h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+  #modal-enviado {
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(17, 165, 116); 
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000; 
+  }
+
+/*FOOTER*/
+footer {
+  background-image: linear-gradient(to right, #96a874, #141c20, #082525); /* Puedes añadir más colores */
+  position: sticky;
 }
